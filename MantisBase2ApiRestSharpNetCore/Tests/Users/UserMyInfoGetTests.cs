@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 
 namespace MantisBase2ApiRestSharpNetCore.Tests.Users
 {
-   // [Parallelizable(ParallelScope.All)] //fazer paralelismo - descomentar quando rodar
+   // [Parallelizable(ParallelScope.All)] //fazer paralelismo -  descomentar quando rodar
     public class UserMyInfoGetTests : TestBase
     {
         [Test]
