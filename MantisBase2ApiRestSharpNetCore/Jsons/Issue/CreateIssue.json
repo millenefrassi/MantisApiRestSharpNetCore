@@ -1,0 +1,44 @@
+{
+    "summary": "$summary",
+    "description": "$description",
+    "additional_information": "$additionalInformation",
+    "project": {
+      "id": $projectId,
+      "name": "$projectName"
+    },
+    "category": {
+      "id": $categoryId,
+      "name": "$categoryName"
+    },
+    "handler": {
+      "name": "$handlerName"
+    },
+    "view_state": {
+      "id": $viewStateId,
+      "name": "$viewStateName"
+    },
+    "priority": {
+      "name": "$priorityName"
+    },
+    "severity": {
+      "name": "$severityName"
+    },
+    "reproducibility": {
+      "name": "$reproducibilityName"
+    },
+    "sticky": $sticky,
+    "custom_fields": [
+      {
+        "field": {
+          "id": $idField,
+          "name": "$nameField"
+        },
+        "value": "$value"
+      }
+    ],
+    "tags": [
+      {
+        "name": "$tagName"
+      }
+    ]
+}

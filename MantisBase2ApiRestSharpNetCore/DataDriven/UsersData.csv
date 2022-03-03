@@ -1,0 +1,6 @@
+﻿username;password;real_name;email;nameaccess_level;enabled;protected
+usuario1;112233;usuario1real;usuario1@gmail.com;updater;false;false
+usuario2;112244;usuario2real;usuario2@gmail.com;updater;false;false
+usuario3;112255;usuario3real;usuario3@gmail.com;updater;false;false
+usuario4;112266;usuario4real;usuario4@gmail.com;updater;false;false
+usuario5;112277;usuario5real;usuario5@gmail.com;updater;false;false

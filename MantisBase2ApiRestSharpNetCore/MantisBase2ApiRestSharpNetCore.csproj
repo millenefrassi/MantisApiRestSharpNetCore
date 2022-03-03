@@ -1,0 +1,108 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Configurations>Debug;Release;DEV;HOM</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Steps\**" />
+    <Compile Remove="Tests\Projects\NovaPasta\**" />
+    <EmbeddedResource Remove="Steps\**" />
+    <EmbeddedResource Remove="Tests\Projects\NovaPasta\**" />
+    <None Remove="Steps\**" />
+    <None Remove="Tests\Projects\NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Jsons\Project\UpdateProject.cs" />
+    <Compile Remove="Requests\FileRequest.cs" />
+    <Compile Remove="Requests\GetUserRequest.cs" />
+    <Compile Remove="Requests\Issues\DeleteIssueDelTests.cs" />
+    <Compile Remove="Requests\ListUsersRequest.cs" />
+    <Compile Remove="Requests\PostCreateUserRequest.cs" />
+    <Compile Remove="Tests\CreateUserTests.cs" />
+    <Compile Remove="Tests\FileTests.cs" />
+    <Compile Remove="Tests\ListUsersTests.cs" />
+    <Compile Remove="Tests\Users\GetIssueGetRequest.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.DEV.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="appsettings.HOM.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ExtentReports.Core" Version="1.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
+    <PackageReference Include="MySql.Data" Version="8.0.27" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="RestSharp" Version="106.10.1" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DataDriven\UsersData.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UsersData.csv</DependentUpon>
+    </Compile>
+    <Compile Update="Queries\IssuesQueries.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>IssuesQueries.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Queries\ProjectQueries.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ProjectQueries.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Queries\UserQueries.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UserQueries.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Queries\IssuesQueries.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IssuesQueries.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Queries\ProjectQueries.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProjectQueries.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Queries\UserQueries.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UserQueries.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DataDriven\UsersData.csv">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>UsersData.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
